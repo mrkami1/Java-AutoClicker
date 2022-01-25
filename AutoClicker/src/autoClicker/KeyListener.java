@@ -1,10 +1,11 @@
-
 package autoClicker;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class KeyListener implements NativeKeyListener
 {
@@ -40,16 +41,18 @@ public class KeyListener implements NativeKeyListener
             text.toLowerCase();
             text.trim();
             int value = 0;
-            final String[] numbers = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            for (int i = 0; i != text.length(); ++i) {
-                final String index = text.substring(i, i + 1);
-                //if (!ArrayUtils.contains((Object[])numbers, (Object)index)) {
-                    GUI.textBox.setText("0");
-                //}
-                value = Integer.parseInt(text);
-            }
-            if (text.equals("") || value > 60000) {
+            System.out.println(text);
+
+            Pattern p = Pattern.compile("^[0-9]*$");
+
+            if (!p.matcher(text).matches()) {
                 GUI.textBox.setText("0");
+            }
+            else {
+                value = Integer.parseInt(text);
+                if (text.equals("") || value > 60000) {
+                    GUI.textBox.setText("0");
+                }
             }
         }
     }

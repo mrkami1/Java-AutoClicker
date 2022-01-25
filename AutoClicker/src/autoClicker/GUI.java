@@ -1,11 +1,6 @@
-// 
-// Decompiled by Procyon v0.5.36
-// 
-
 package autoClicker;
 
 import java.awt.Font;
-import java.util.Random;
 import javax.swing.JScrollPane;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -149,6 +144,8 @@ public class GUI
         GUI.stopPlayingLabel.setForeground(Color.white);
         GUI.mottoLabel.setBounds(25, 15, 200, 25);
         GUI.mottoLabel.setForeground(Color.white);
+        GUI.mottoLabel.setFont(new Font("Courier New", 2, 14));
+        GUI.mottoLabel.setText("By: Mr. Kami");
         GUI.inputLabel.setForeground(Color.white);
         GUI.inputLabel.setBounds(25, 140, 100, 25);
         GUI.checkRepeat.setBounds(20, 110, 100, 25);
@@ -205,72 +202,6 @@ public class GUI
         GUI.frame.setTitle("Kami AutoClicker");
         GUI.frame.setDefaultCloseOperation(3);
         GUI.frame.setAlwaysOnTop(true);
-        GUI.frame.setResizable(false);
-    }
-    
-    public static void randFont() {
-        final Random rand = new Random();
-        final int num = rand.nextInt(10);
-        switch (num) {
-            case 0: {
-                GUI.mottoLabel.setFont(new Font("Courier New", 2, 14));
-                GUI.mottoLabel.setText("omae wa mou shindeiru");
-                break;
-            }
-            case 1: {
-                GUI.mottoLabel.setFont(new Font("Arial", 1, 18));
-                GUI.mottoLabel.setText("wow such click");
-                break;
-            }
-            case 2: {
-                GUI.mottoLabel.setFont(new Font("Century Gothic", 0, 18));
-                GUI.mottoLabel.setText("rawr xD");
-                break;
-            }
-            case 3: {
-                GUI.mottoLabel.setFont(new Font("Courier New", 2, 18));
-                GUI.mottoLabel.setText("lmaoborghini");
-                break;
-            }
-            case 4: {
-                GUI.mottoLabel.setFont(new Font("Courier New", 1, 18));
-                GUI.mottoLabel.setText("haha yes");
-                break;
-            }
-            case 5: {
-                GUI.mottoLabel.setFont(new Font("Century Gothic", 1, 14));
-                GUI.mottoLabel.setText("Your free trial has expired");
-                break;
-            }
-            case 6: {
-                GUI.mottoLabel.setFont(new Font("Arial", 2, 12));
-                GUI.mottoLabel.setText("Only people with 9000 IQ will get this");
-                break;
-            }
-            case 7: {
-                GUI.mottoLabel.setFont(new Font("Courier New", 0, 12));
-                GUI.mottoLabel.setText("@yy lm@o");
-                break;
-            }
-            case 8: {
-                GUI.mottoLabel.setFont(new Font("Arial", 0, 18));
-                GUI.mottoLabel.setText("no u");
-                break;
-            }
-            case 9: {
-                GUI.mottoLabel.setFont(new Font("Arial", 2, 14));
-                GUI.mottoLabel.setText("this was generated randomly");
-                break;
-            }
-            case 10: {
-                GUI.mottoLabel.setFont(new Font("Courier New", 2, 18));
-                GUI.mottoLabel.setText("Creator: Kami");
-                break;
-            }
-            default: {
-                GUI.mottoLabel.setText("null");
-                break;
-            }
-        }
-    }
+        GUI.frame.setResizable(false);           
+    }      
 }

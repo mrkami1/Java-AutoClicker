@@ -9,7 +9,6 @@ public class MainClass
         GUI.createGUI();
         MouseListener.listenForMouse();
         KeyListener.listenForKey();
-        GUI.randFont();
         Bot.startLoop();
     }
 }

@@ -1,7 +1,3 @@
-// 
-// Decompiled by Procyon v0.5.36
-// 
-
 package autoClicker;
 
 import java.util.concurrent.TimeUnit;
@@ -43,7 +39,6 @@ public class MouseListener implements NativeMouseInputListener {
     }
     
     public void nativeMouseClicked(NativeMouseEvent e) {
-        System.out.println("tystet");
     }
     
     public void nativeMousePressed(NativeMouseEvent e) {
@@ -66,14 +61,11 @@ public class MouseListener implements NativeMouseInputListener {
     }
     
     public void nativeMouseReleased(NativeMouseEvent e) {
-        System.out.println("tystet");
     }
     
     public void nativeMouseDragged(NativeMouseEvent e) {
-        System.out.println("tystet");
     }
     
     public void nativeMouseMoved(NativeMouseEvent e) {
-        System.out.println("Mouse Moved: " + e.getX() + ", " + e.getY());
     }
 }
